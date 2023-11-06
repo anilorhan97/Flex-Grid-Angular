@@ -1,0 +1,25 @@
+.grid{
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    width: 100vw;
+    margin-left: 50px;
+    .app-card{
+        padding: 10px;
+    }
+}
+
+@media(min-width:520px) and (max-width: 1311px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); 
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-left: 0;
+    }
+}
+
+

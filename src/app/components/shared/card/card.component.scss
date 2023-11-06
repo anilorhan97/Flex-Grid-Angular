@@ -1,0 +1,29 @@
+.card{
+    margin-right: 20px;
+    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    transition: transform 1s ease;
+    &:hover{transform: scale(1.1);}
+    .images{
+        height: 215px;
+    }
+    .card-body{
+        height: 170px;
+    }
+    .details{
+        align-self: flex-end;
+        margin: 0 10px 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card{
+        width: 100%;
+        margin-right: 0;
+        .card-body{
+            height: 140px;
+        }
+    }
+}

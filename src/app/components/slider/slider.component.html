@@ -1,0 +1,15 @@
+<div class="container-sm">
+    <ul>
+        <li>
+            <a (click)="prev()"><mat-icon>keyboard_arrow_left</mat-icon></a>
+        </li>
+        <li class="deneme">
+            <div class="images">
+                <img class="img" [src]="images[currentPage].url">
+            </div>
+        </li>
+        <li>
+            <a (click)="next()"><mat-icon>keyboard_arrow_right</mat-icon></a>
+        </li>
+    </ul>
+</div>

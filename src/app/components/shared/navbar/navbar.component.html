@@ -1,0 +1,45 @@
+<div class="nav">
+    <div class="left-icons">
+        <div id="main">
+            <button class="openbtn" (click)="openSide()">☰</button>
+        </div>
+        <div class="logo">
+            <img src="" routerLink="" class="logo-image">
+        </div>
+    </div>
+
+    <div class="content">
+        <a routerLink="/flex">Flex</a>
+        <a routerLink="/grid">Grid</a>
+    </div>
+    <div class="right-icons">
+        <div class="vertical-line"></div>
+        <span class="user-role">Hesabım</span>
+        <mat-icon class="profile-icon ms-1">account_circle</mat-icon>
+        <mat-icon class="dropdown-icon">keyboard_arrow_down</mat-icon>
+    </div>
+</div>
+<mat-drawer-container>
+    <mat-drawer [(opened)]="opened" mode="push">
+        <mat-list>
+                <mat-list-item routerLink="/flex" routerLinkActive="active">
+                    <a><mat-icon>label_important</mat-icon>Flex</a>
+                </mat-list-item>
+                <mat-list-item routerLink="/grid">
+                    <a><mat-icon>label_important</mat-icon>Grid</a>
+                </mat-list-item>
+
+            <mat-list-item routerLink="" class="logout bottom-items" (click)="logOut()">
+                <a><mat-icon>exit_to_app</mat-icon>Çıkış Yap</a>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="app-slider container-sm">
+            <app-slider></app-slider>
+        </div>
+        <div class="main my-5">
+            <router-outlet class="column"></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

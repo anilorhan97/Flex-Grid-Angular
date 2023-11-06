@@ -1,0 +1,8 @@
+<div class="grid">
+    <app-card *ngFor="let post of posts"
+    [title] = "post.title"
+    [imageUrl] = "post.imageUrl"
+    [desc] = "post.desc"
+    class="app-card"
+></app-card>
+</div>
